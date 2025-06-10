@@ -1,0 +1,12 @@
+{
+    "mcpServers": {
+      "chat": {
+        "command": "/app/.venv/bin/python",
+        "args": ["/app/mcp_tool/chat_mcp_tool.py"]
+      },
+      "exa_search": {
+        "command": "/app/.venv/bin/python",
+        "args": ["/app/mcp_tool/ExaSearch_mcp_tool.py"]
+      }
+    }
+}
