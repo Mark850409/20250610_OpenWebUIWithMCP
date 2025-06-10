@@ -1,0 +1,14 @@
+version: '3.8' # 使用較新的 Docker Compose 版本
+
+services:
+  mcpo-webui: # 定義一個服務名稱
+    build: . # 從當前目錄的 Dockerfile 建置 Image
+    container_name: mcpo-webui # 給容器一個固定的名稱 (可選)
+    ports:
+      - "8000:8000" # 映射 mcpo 的端口 (本機:容器)
+      - "8080:8080" # 映射 open-webui 的端口 (本機:容器)
+    volumes:
+      - ./config:/app/config # 掛載本機的 ./config 資料夾到容器內的 /app/config
+    env_file:
+      - .env # 載入同目錄下的 .env 檔案中的環境變數
+    restart: always # 設定容器停止後自動重啟 (除非手動停止)
