@@ -7,6 +7,21 @@
       "exa_search": {
         "command": "/app/.venv/bin/python",
         "args": ["/app/mcp_tool/ExaSearch_mcp_tool.py"]
-      }
+      },
+    "n8n-local": {
+      "command": "/app/.venv/bin/python",
+      "args": [
+        "/app/mcp_tool/n8n_mcp_tool.py"
+      ],
+      "env": {
+        "N8N_API_URL": "https://myn8n.zeabur.app/api/v1", 
+        "N8N_API_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlZGIzZWVjNy03YzUwLTRhZjQtYTJhNS1jNmQzMmI4ODlhNzYiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwiaWF0IjoxNzQ5ODkyMDkwfQ.z0B34Uy3lKlj02bb5EhsC63QR8MQVLiv69AG75bd9zs",
+        "N8N_WEBHOOK_USERNAME": "xiaoyan850409@gmail.com",
+        "N8N_WEBHOOK_PASSWORD": "Mark@850409"
+      },
+      "disabled": false,
+      "autoApprove": []
     }
+  }
+    
 }
