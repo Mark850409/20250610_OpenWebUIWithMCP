@@ -1,27 +1,50 @@
 {
     "mcpServers": {
-      "chat": {
+      "n8n-chat-RAG-mcp": {
         "command": "/app/.venv/bin/python",
         "args": ["/app/mcp_tool/chat_mcp_tool.py"]
       },
-      "exa_search": {
+      "exa_search-mcp": {
         "command": "/app/.venv/bin/python",
         "args": ["/app/mcp_tool/ExaSearch_mcp_tool.py"]
       },
-    "n8n-local": {
-      "command": "/app/.venv/bin/python",
-      "args": [
-        "/app/mcp_tool/n8n_mcp_tool.py"
-      ],
-      "env": {
-        "N8N_API_URL": "https://myn8n.zeabur.app/api/v1", 
-        "N8N_API_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlZGIzZWVjNy03YzUwLTRhZjQtYTJhNS1jNmQzMmI4ODlhNzYiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwiaWF0IjoxNzQ5ODkyMDkwfQ.z0B34Uy3lKlj02bb5EhsC63QR8MQVLiv69AG75bd9zs",
-        "N8N_WEBHOOK_USERNAME": "xiaoyan850409@gmail.com",
-        "N8N_WEBHOOK_PASSWORD": "Mark@850409"
+      "n8n-mcp-server": {
+        "command": "/app/.venv/bin/python",
+        "args": [
+          "/app/mcp_tool/n8n_mcp_tool.py"
+        ],
+        "env": {
+          "N8N_API_URL": "https://myn8n.zeabur.app/api/v1", 
+          "N8N_API_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlZGIzZWVjNy03YzUwLTRhZjQtYTJhNS1jNmQzMmI4ODlhNzYiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwiaWF0IjoxNzQ5ODkyMDkwfQ.z0B34Uy3lKlj02bb5EhsC63QR8MQVLiv69AG75bd9zs",
+          "N8N_WEBHOOK_USERNAME": "xiaoyan850409@gmail.com",
+          "N8N_WEBHOOK_PASSWORD": "Mark@850409"
+        },
+        "disabled": false,
+        "autoApprove": []
       },
-      "disabled": false,
-      "autoApprove": []
-    }
+      "flux-image-mcp": {
+        "command": "/app/.venv/bin/python",
+        "args": [
+          "/app/mcp_tool/mcp_flux_image.py"
+        ]
+      },
+      "Github-mcp": {
+       "command": "npx",
+        "args": [
+          "-y",
+          "@smithery/cli@latest",
+          "run",
+          "@smithery-ai/github",
+          "--key",
+          "9669b419-3919-46f8-9d93-115f62db0d84",
+          "--profile",
+          "multiple-amphibian-zePwB2"
+        ]
+      },
+      "weather-mcp": {
+        "command": "/app/.venv/bin/python",
+        "args": ["/app/mcp_tool/weather_mcp_tool.py"]
+      }
   }
     
 }

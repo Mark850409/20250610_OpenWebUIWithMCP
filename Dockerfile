@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     # 安裝 ffmpeg 和 ffprobe (open-webui 可能需要處理音檔)
     ffmpeg \
+    unzip \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Node.js and npm via NodeSource
@@ -45,6 +46,7 @@ RUN which mcpo || echo "mcpo not found"
 
 # 建立 config 目錄 (複製 config.json 在 run 時掛載會覆蓋這裡的複製)
 # COPY config/config.json /app/config/config.json # 移除這行，改為只建立目錄
+
 
 RUN mkdir -p /app/config
 
